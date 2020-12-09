@@ -43,3 +43,9 @@ http_archive(
     strip_prefix = "re2-2020-11-01",
     url = "https://github.com/google/re2/archive/2020-11-01.tar.gz",
 )
+
+load("//fuzzing/private:oss_fuzz.bzl", "oss_fuzz_repository")
+
+oss_fuzz_repository(
+    name = "rules_fuzzing_oss_fuzz",
+)
